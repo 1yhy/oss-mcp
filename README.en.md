@@ -42,7 +42,7 @@ pnpm add -g oss-mcp
 
 ```bash
 # Direct start (stdio mode)
-oss-mcp --oss-config='{\"default\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"i18n-bucket\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}}'
+oss-mcp --oss-config='{\"default\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"YOUR_BUCKET\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}}'
 
 
 # Debug with Inspector
@@ -136,12 +136,12 @@ pnpm inspect
 
 ```json
 {
-  "mcp.servers": {
+  "mcpServers": {
     "oss-mcp": {
       "command": "npx",
       "args": [
         "oss-mcp",
-        "--oss-config='{\"default\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"i18n-bucket\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}}'",
+        "--oss-config='{\"default\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"YOUR_BUCKET\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}}'",
         "--stdio"
       ]
     }
@@ -155,12 +155,12 @@ Using environment variables makes it easy to configure multiple OSS accounts:
 
 ```json
 {
-  "mcp.servers": {
+  "mcpServers": {
     "oss-mcp": {
       "command": "npx",
       "args": [
         "oss-mcp",
-        "--oss-config='{\"default\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"i18n-bucket\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}, \"test\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"i18n-bucket\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}}'",
+        "--oss-config='{\"default\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"YOUR_BUCKET\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}, \"test\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"YOUR_BUCKET\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}}'",
         "--stdio"
       ]
     }

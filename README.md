@@ -41,7 +41,7 @@ pnpm add -g oss-mcp
 
 ```bash
 # 直接启动 (stdio模式)
-oss-mcp --oss-config='{\"default\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"i18n-bucket\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}}'
+oss-mcp --oss-config='{\"default\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"YOUR_BUCKET\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}}'
 
 
 # 使用Inspector调试
@@ -135,12 +135,12 @@ pnpm inspect
 
 ```json
 {
-  "mcp.servers": {
+  "mcpServers": {
     "oss-mcp": {
       "command": "npx",
       "args": [
         "oss-mcp",
-        "--oss-config='{\"default\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"i18n-bucket\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}}'",
+        "--oss-config='{\"default\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"YOUR_BUCKET\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}}'",
         "--stdio"
       ]
     }
@@ -154,12 +154,12 @@ pnpm inspect
 
 ```json
 {
-  "mcp.servers": {
+  "mcpServers": {
     "oss-mcp": {
       "command": "npx",
       "args": [
         "oss-mcp",
-        "--oss-config='{\"default\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"i18n-bucket\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}, \"test\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"i18n-bucket\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}}'",
+        "--oss-config='{\"default\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"YOUR_BUCKET\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}, \"test\":{\"region\":\"oss-cn-shenzhen\",\"accessKeyId\":\"YOUR_KEY\",\"accessKeySecret\":\"YOUR_SECRET\",\"bucket\":\"YOUR_BUCKET\",\"endpoint\":\"oss-cn-shenzhen.aliyuncs.com\"}}'",
         "--stdio"
       ]
     }
