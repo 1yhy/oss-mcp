@@ -1,0 +1,72 @@
+{
+  "name": "oss-mcp",
+  "version": "1.0.2",
+  "description": "本地MCP服务器，用于将文件上传到阿里云OSS，支持多配置和目录指定",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "oss-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "nodemon --watch src -e ts --exec \"npm run build && node dist/index.js --http\"",
+    "dev:watch": "cross-env NODE_ENV=development tsup --watch",
+    "build": "tsup",
+    "prepublishOnly": "npm run build",
+    "start": "npm run build && node dist/index.js",
+    "start:stdio": "cross-env NODE_ENV=cli node dist/index.js",
+    "start:http": "node dist/index.js --http",
+    "inspect": "pnpx @modelcontextprotocol/inspector",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "pub:release": "pnpm build && npm publish --access public",
+    "publish:local": "pnpm build && npm pack",
+    "serve:http": "node dist/index.js --http"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1yhy/oss-mcp.git"
+  },
+  "keywords": [
+    "oss",
+    "aliyun",
+    "upload",
+    "mcp",
+    "typescript",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "@types/yargs": "^17.0.33",
+    "ali-oss": "^6.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2",
+    "yargs": "^17.7.2",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/ali-oss": "^6.16.11",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^20.14.1",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.0.1",
+    "eslint": "^8.57.0",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.2.5",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.2"
+  }
+}
