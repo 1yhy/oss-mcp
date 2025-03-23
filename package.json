@@ -1,6 +1,6 @@
 {
   "name": "oss-mcp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "本地MCP服务器，用于将文件上传到阿里云OSS，支持多配置和目录指定",
   "type": "module",
   "main": "dist/index.js",
